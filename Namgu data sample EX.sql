@@ -27,8 +27,16 @@ SELECT 구분, 세대수, 인구수, 통, 반 FROM Namgu WHERE 통 >= 20 OR 반 
 # Namgu 테이블에서 인구수가 10000명 이상인 레코드중 18세이상인구수 12000명 이하이거나 반이 100이하인 레코드의 전체 필드 검색
 SELECT * FROM Namgu WHERE 인구수 >= 10000 AND (18세이상인구수 <= 12000 OR 반 <= 100);
 
-SELECT * FROM Namgu WHERE (인구수 >= 10000 AND 18세이상인구수 <= 12000) OR 반 <= 100;
+# Namgu 테이블에서 10000명 이상이면서 18세인구수가 12000명 이하이고 반이 100 이상인 레코드의 전체 필드 검색
+SELECT * FROM Namgu WHERE (인구수 >= 10000 AND 18세이상인구수 <= 12000) OR 반 >= 100;
 
+# 내림차순 DESC
+SELECT * FROM Namgu
+ORDER BY 세대수 DESC;
+
+# 오름차순 ASC
+SELECT * FROM Namgu 
+ORDER BY 통 DESC, 반 ASC;
 
 
 
