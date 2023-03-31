@@ -38,5 +38,48 @@ ORDER BY 세대수 DESC;
 SELECT * FROM Namgu 
 ORDER BY 통 DESC, 반 ASC;
 
+SELECT count(면적), max(세대수), min(세대수)
+FROM Namgu;
+
+# GROUP BY 되지 않은 필드는 Having 사용 불가능
+
+SELECT 면적, count(*), max(세대수), min(세대수)
+	FROM Namgu
+    GROUP BY 면적
+    HAVING 세대수 >= 5000
+    ORDER BY 면적;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
