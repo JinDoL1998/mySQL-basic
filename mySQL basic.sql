@@ -408,8 +408,9 @@ COMMIT;
 # ROLLBACK
 # 트랜잭션을 취소하고 되돌려놓는 쿼리문 
 
+SHOW INDEX FROM Custom;
 
-
+SHOW DATABASES;
 
 
 
